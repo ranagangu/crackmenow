@@ -1,0 +1,42 @@
+.faq-admin-page {
+  padding-top: 94px;
+}
+
+.faq-item-card {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.faq-item-line {
+  margin: 0 0 6px;
+  color: #cbd5e1;
+}
+
+.faq-item-line strong {
+  color: #86efac;
+}
+
+.faq-question-text {
+  color: #f8fafc;
+}
+
+.faq-reply-text {
+  margin: 10px 0 0;
+  color: #86efac;
+}
+
+.faq-reply-box {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq-delete-btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .faq-admin-page {
+    padding-top: 84px;
+  }
+}

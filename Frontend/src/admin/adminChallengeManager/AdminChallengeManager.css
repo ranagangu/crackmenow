@@ -1,0 +1,38 @@
+.admin-challenges-page {
+  padding-top: 92px;
+}
+
+.admin-challenge-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.admin-challenge-list-head {
+  margin-top: 6px;
+}
+
+.admin-challenge-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-challenge-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .admin-challenges-page {
+    padding-top: 84px;
+  }
+
+  .admin-challenge-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

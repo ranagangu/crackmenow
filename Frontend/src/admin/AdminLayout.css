@@ -1,0 +1,121 @@
+.admin-layout-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #030712;
+  color: #f8fafc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-layout-sidebar {
+  position: fixed;
+  top: 80px;
+  left: -256px;
+  width: 250px;
+  height: calc(100vh - 80px);
+  background: linear-gradient(170deg, #0b1220, #111827);
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 12px 0 28px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  z-index: 1500;
+  transition: left 0.25s ease;
+}
+
+.admin-layout-sidebar.open {
+  left: 0;
+}
+
+.admin-layout-title {
+  margin: 2px 0 16px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #86efac;
+}
+
+.admin-layout-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-layout-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-layout-link:hover {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.admin-layout-link.active {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #03260f;
+}
+
+.admin-layout-toggle {
+  position: fixed;
+  top: 98px;
+  left: 14px;
+  z-index: 1600;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #062915;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: left 0.25s ease;
+}
+
+.admin-layout-sidebar.open ~ .admin-layout-toggle {
+  left: 252px;
+}
+
+.admin-layout-overlay {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: rgba(2, 6, 23, 0.5);
+  z-index: 1000;
+}
+
+.admin-layout-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 112px 16px 20px;
+}
+
+@media (max-width: 640px) {
+  .admin-layout-sidebar {
+    width: 230px;
+    left: -236px;
+  }
+
+  .admin-layout-sidebar.open ~ .admin-layout-toggle {
+    left: 230px;
+  }
+
+  .admin-layout-content {
+    padding: 104px 10px 14px;
+  }
+
+  .admin-layout-toggle {
+    top: 92px;
+    width: 32px;
+    height: 32px;
+  }
+}
